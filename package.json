@@ -1,0 +1,19 @@
+{
+  "name": "friends_cafe_adbms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env backend/server.js",
+    "check": "node --check backend/server.js && node --check backend/db.js && node --check frontend/script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.2"
+  }
+}

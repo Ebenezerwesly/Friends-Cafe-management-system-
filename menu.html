@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#211b17">
+    <title>Our menu | Friends Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="public-page public-interior">
+    <header class="site-header">
+        <a class="logo" href="index.html"><span class="logo-mark">FC</span><span>Friends<span class="logo-accent"> Café</span><small>GOOD THINGS, BREWED DAILY</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a><a class="active" href="menu.html">Our menu</a><a href="about.html">Our story</a>
+        </nav>
+        <a class="header-action" href="dashboard.html">Staff workspace <span>↗</span></a>
+    </header>
+    <main class="app-main public-main">
+        <section class="welcome-row">
+            <div><p class="eyebrow">FRESH FROM OUR KITCHEN</p><h1>Find your new favourite.</h1><p class="muted">Explore every café favourite, with prices in Indian rupees.</p></div>
+            <a class="button button-primary" href="order.html">Place an order <span>→</span></a>
+        </section>
+        <section class="public-section menu-section" aria-label="Friends Café menu">
+            <div class="section-heading">
+                <div><p class="eyebrow">MADE FRESH FOR YOU</p><h2>Something delicious awaits.</h2><p class="section-description">Menu items, photos, availability, and prices are loaded from our café menu.</p></div>
+            </div>
+            <div id="menu-container" class="menu-container menu-page-grid" aria-live="polite">
+                <p class="table-empty">Loading today's menu…</p>
+            </div>
+        </section>
+    </main>
+    <footer class="app-footer">Friends Café <span>·</span> Made with warmth, served with a smile.<a class="footer-right" href="index.html">Back to home ↑</a></footer>
+    <script src="script.js"></script>
+</body>
+</html>

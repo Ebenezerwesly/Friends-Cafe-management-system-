@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#25211e">
+    <title>Customers | Friends Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+    <header class="site-header">
+        <a class="logo" href="dashboard.html"><span class="logo-mark">FC</span><span>Friends<span class="logo-accent"> Café</span><small>CAFE MANAGEMENT</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav">
+            <a href="dashboard.html">Overview</a>
+            <a href="orders.html">Orders</a>
+            <a href="menu.html">Menu</a>
+            <a class="active" href="customer.html">Customers</a>
+            <a href="payment.html">Payments</a>
+        </nav>
+        <a class="header-action" href="index.html">View website <span>↗</span></a>
+    </header>
+    <main class="app-main">
+        <section class="welcome-row">
+            <div><p class="eyebrow">CUSTOMER RELATIONSHIPS · PHASE 3</p><h1>Know your regulars.</h1><p class="muted">Registration, order history, and lifetime spend in one view.</p></div>
+        </section>
+        <section class="customer-layout">
+            <article class="panel registration-panel">
+                <div class="panel-heading"><div><p class="eyebrow">NEW PROFILE</p><h2>Register a customer</h2></div><span class="form-icon">♙</span></div>
+                <form id="customerForm">
+                    <label for="custName">Full name</label>
+                    <input type="text" id="custName" maxlength="100" placeholder="e.g. Alex Morgan" autocomplete="name" required>
+                    <label for="custPhone">Phone number <span class="optional">(optional)</span></label>
+                    <input type="tel" id="custPhone" maxlength="15" placeholder="10-digit mobile number" autocomplete="tel">
+                    <label for="custEmail">Email address <span class="optional">(optional)</span></label>
+                    <input type="email" id="custEmail" maxlength="100" placeholder="alex@example.com" autocomplete="email">
+                    <button class="button button-primary button-full" type="submit">Create customer profile <span>→</span></button>
+                </form>
+                <div id="customerResult" aria-live="polite"></div>
+            </article>
+            <article class="panel customer-list-panel">
+                <div class="panel-heading"><div><p class="eyebrow">ORDER ACTIVITY & LIFETIME SPEND</p><h2>Customer directory</h2></div><span class="panel-badge">Latest 200</span></div>
+                <div class="search-field directory-search"><span>⌕</span><input id="customerSearch" type="search" placeholder="Find by name, email, or phone" aria-label="Search customers"></div>
+                <div class="table-wrap"><table><thead><tr><th>ID</th><th>CUSTOMER</th><th>PHONE</th><th>EMAIL</th><th>LIFETIME</th><th>ACTIONS</th></tr></thead><tbody id="customersTable"><tr><td colspan="6" class="table-empty">Loading customers…</td></tr></tbody></table></div>
+                <p class="table-footnote">Order count and lifetime spend are calculated from the customer and order records.</p>
+            </article>
+        </section>
+    </main>
+    <footer class="app-footer">Friends Café <span>·</span> Cafe Management System <span class="footer-right">Customer directory</span></footer>
+    <script src="script.js"></script>
+</body>
+</html>
